@@ -1,0 +1,332 @@
+// base
+
+@import "./base/reset";
+
+// layout
+
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/navigation";
+
+// components
+
+@import "./components/button";
+
+
+
+body {
+    font-family: 'Mitr', sans-serif;
+    background-color: white;
+    background-image: url(../img/favicon/fondogranderosa.png);
+    background-size: cover;
+}
+
+$color-primario: #D94A70;
+
+$color-secundario: #f05981;
+
+@mixin botones-generales ($type) {
+    @if $type =="primary" {
+        list-style-type: none;
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+    }
+
+    @else if $type =="secundary" {
+        list-style-type: none;
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+    }
+}
+
+@mixin imagenes ($type) {
+    @if $type =="tamaños-img" {
+        width: 280px;
+        height: 350px;
+        border-radius: 40px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    @else if $type =="tamaños-img-dos" {
+        width: 280px;
+        height: 350px;
+        border-radius: 40px;
+    }
+}
+
+/* ESTILOS CABECERA */
+
+
+
+
+
+
+
+.color-div {
+    background: #ee9ca7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+/* ESTILOS PRICIPALES */
+
+section {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.p-preguntas {
+    padding: 10px 0 10px 0;
+    margin-left: 20px;
+}
+
+
+.section2 h2 {
+    color: $color-primario;
+}
+
+h2 {
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+    span {
+        color: white;
+        background-color: #f05981;
+        border-radius: 10px;
+        padding: 0px 5px 0 5px;
+        text-align: center;
+    }
+}
+
+.h2 {
+    grid-area: h2;
+    justify-self: center;
+    align-self: center;
+}
+
+.flex-ubi {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.listaUbicacion {
+    @extend .flex-ubi;
+    grid-area: sect1;
+}
+
+.horarios {
+    @extend .flex-ubi;
+    grid-area: sect2;
+}
+
+.maps {
+    grid-area: sect3;
+}
+
+%enca-ubicacion {
+    justify-self: center;
+    align-self: center;
+}
+
+.encaDia {
+    @extend %enca-ubicacion;
+    grid-area: encaDia;
+}
+
+.encaHora {
+    @extend %enca-ubicacion;
+    grid-area: encaHora;
+}
+
+.encaUbi {
+    @extend %enca-ubicacion;
+    grid-area: encaUbi;
+}
+
+.parrafo {
+    font-size: 2rem;
+}
+
+.productos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.div-form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 1%;
+    width: 30%;
+}
+
+.input-genero {
+    width: 2%;
+}
+
+form {
+    margin-left: 1%;
+}
+
+select {
+    width: 50%;
+}
+
+.caja-de-texto {
+    width: 50%;
+}
+
+
+
+
+.img-producto {
+    @include imagenes("tamaños-img")
+}
+
+.contenedor-productos {
+    background-color: whitesmoke;
+    border-radius: 40px;
+    width: 500px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.contenedor-descripcion {
+    margin-left: 2%;
+}
+
+
+
+
+#main-contacto {
+    padding-top: 30px;
+}
+
+#main-preguntas {
+    height: 73vh;
+
+    section div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.logos-redes {
+    width: 50px;
+    height: 50px;
+}
+
+/* MEDIA QUERIES */
+
+#puntosDeEncuentro {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 50px 1fr;
+    grid-template-areas:
+        "h2 h2 h2"
+        "encaDia encaHora encaUbi"
+        "sect1 sect2 sect3"
+    ;
+}
+
+@media screen and (max-width: 900px) {
+
+    input {
+        width: 100%;
+    }
+
+    .caja-de-texto {
+        width: 100%;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 480px) {
+        #puntosDeEncuentro {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 50px 500px 500px;
+            grid-template-areas:
+                "h2 h2"
+                "sect1 sect2"
+                "sect3 sect3"
+            ;
+        }
+    
+        .encaDia {
+            display: none;
+        }
+    
+        .encaHora {
+            display: none;
+        }
+    
+        .encaUbi {
+            display: none;
+        }
+    
+        #body1 {
+            display: grid;
+            grid-template-areas:
+                " header1"
+                " section2"
+                " footer1"
+            ;
+            grid-template-columns: 1fr;
+            grid-template-rows: 100px 1fr 100px;
+    
+        }
+    
+        #header1 {
+            flex-direction: row;
+        }
+    
+        #header1 nav ul {
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    
+        #section1 h2 {
+            margin-top: 100px;
+        }
+    
+        section p {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    
+        .col {
+            margin: 10px 0px 10px 0px;
+        }
+    
+        #main-preguntas {
+            height: 100vh;
+        }
+    
+        .contenedor-productos {
+            flex-direction: column;
+            width: 280px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+            .contenedor-descripcion {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+

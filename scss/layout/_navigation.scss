@@ -1,0 +1,15 @@
+.nav-index {
+    width: 100%;
+    padding: 0;
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: black;
+
+    &:hover {
+        color: $color-primario;
+        background-color: rgba(78, 77, 77, 0.089);
+        border-radius: 30px;
+    }
+}
