@@ -14,7 +14,7 @@ body {
   border-radius: 20px;
   background-color: #D94A70;
   padding: 5px 10px 5px 10px;
-  width: 70px;
+  width: 80px;
   margin: 0px 20px 20px 10px;
   list-style-type: none;
   text-decoration: none;
@@ -331,6 +331,10 @@ label {
   }
   .col-img {
     margin-bottom: 20px;
+  }
+  .boton-comprar {
+    padding: 5px;
+    text-align: center;
   }
 }
 @media screen and (max-width: 1000px) and (max-width: 480px) {

@@ -18,6 +18,11 @@
         margin-bottom: 20px;
     }
 
+    .boton-comprar {
+       padding: 5px;
+       text-align: center;
+    }
+
     @media screen and (max-width: 480px) {
         #puntosDeEncuentro {
             display: grid;
