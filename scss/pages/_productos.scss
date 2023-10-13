@@ -1,0 +1,26 @@
+.main-productos {
+    min-height: 73vh;
+}
+
+.img-producto {
+    @include imagenes("tamaños-img")
+}
+
+.contenedor-productos {
+    background-color: whitesmoke;
+    border-radius: 40px;
+    width: 500px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.contenedor-descripcion {
+    margin-left: 2%;
+}
+
+.productos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}

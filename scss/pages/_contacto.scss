@@ -1,0 +1,44 @@
+#main-contacto {
+    padding-top: 30px;
+    min-height: 73vh;
+}
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px 10px 5px 10px;
+}
+
+input {
+    margin-bottom: 1%;
+    width: 100%;
+}
+
+.input-genero {
+    width: 2%;
+}
+
+.input-enviar {
+    width: 200px;
+}
+
+select {
+    width: 50%;
+}
+
+.caja-de-texto {
+    width: 100%;
+}
+
+label {
+    width: 100%;
+}

@@ -1,0 +1,43 @@
+.main-ubicacion {
+    min-height: 73vh;
+}
+
+.flex-ubi {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.listaUbicacion {
+    @extend .flex-ubi;
+    grid-area: sect1;
+}
+
+.horarios {
+    @extend .flex-ubi;
+    grid-area: sect2;
+}
+
+.maps {
+    grid-area: sect3;
+}
+
+%enca-ubicacion {
+    justify-self: center;
+    align-self: center;
+}
+
+.encaDia {
+    @extend %enca-ubicacion;
+    grid-area: encaDia;
+}
+
+.encaHora {
+    @extend %enca-ubicacion;
+    grid-area: encaHora;
+}
+
+.encaUbi {
+    @extend %enca-ubicacion;
+    grid-area: encaUbi;
+}

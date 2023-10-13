@@ -1,0 +1,94 @@
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1000px) {
+
+    input {
+        width: 100%;
+    }
+
+    .caja-de-texto {
+        width: 100%;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .col-img {
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 480px) {
+        #puntosDeEncuentro {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 50px 500px 500px;
+            grid-template-areas:
+                "h2 h2"
+                "sect1 sect2"
+                "sect3 sect3"
+            ;
+        }
+    
+        .encaDia {
+            display: none;
+        }
+    
+        .encaHora {
+            display: none;
+        }
+    
+        .encaUbi {
+            display: none;
+        }
+    
+        #body1 {
+            display: grid;
+            grid-template-areas:
+                " header1"
+                " section2"
+                " footer1"
+            ;
+            grid-template-columns: 1fr;
+            grid-template-rows: 100px 1fr 100px;
+    
+        }
+    
+        #header1 {
+            flex-direction: row;
+        }
+    
+        #header1 nav ul {
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    
+        #section1 h2 {
+            margin-top: 100px;
+        }
+    
+        section p {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    
+        .col {
+            margin: 10px 0px 10px 0px;
+        }
+    
+        #main-preguntas {
+            height: 100vh;
+        }
+    
+        .contenedor-productos {
+            flex-direction: column;
+            width: 280px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+            .contenedor-descripcion {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+#puntosDeEncuentro {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 50px 1fr;
+    grid-template-areas:
+        "h2 h2 h2"
+        "encaDia encaHora encaUbi"
+        "sect1 sect2 sect3"
+    ;
+}

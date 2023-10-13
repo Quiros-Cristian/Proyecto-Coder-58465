@@ -1,0 +1,38 @@
+.main-inicio {
+    min-height: 73vh;
+}
+
+section {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.section2 h2 {
+    color: $color-primario;
+}
+
+h2 {
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+    span {
+        color: white;
+        background-color: #f05981;
+        border-radius: 10px;
+        padding: 0px 5px 0 5px;
+        text-align: center;
+    }
+}
+
+.h2 {
+    grid-area: h2;
+    justify-self: center;
+    align-self: center;
+}
+
+.parrafo {
+    font-size: 2rem;
+}
+
+.col-img {
+    margin-bottom: 20px;
+}
